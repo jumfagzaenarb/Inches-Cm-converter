@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in Javascript</title>
+</head>
+<body>
+    <p id="global"></p>
+    <button onclick="call()">Call Function</button>
+    <p id="button"></p>
+    <button onclick="multiplyNumbers()">Multiply</button>
+    <p id="example">Sum will be printed here</p>
+    <p id="output">output here</p>
+    <p id="demo">print sum</p>
+    <p id="result"></p>
+
+
+    <script>
+        // example
+        function writetext(text) {
+            document.getElementById("result").innerHTML = text;
+        }
+        writetext("Hello World");
+
+        // example
+        function addNumber(numb1, numb2) {
+            const sum = numb1 + numb2;
+            document.getElementById("output").innerHTML = sum;
+        }
+        addNumber (6, 5)
+
+        // example on onclick 
+        function multiplyNumbers(add1, add2) {
+            var multiply = 4 * 6;
+            document.getElementById("button").innerHTML = multiply;
+        }
+
+                                    
+        // The return statement is used in a function to stop 
+        // its execution and to return a value to the function caller.
+        function addnumber(num1, num2) {
+            var sum = num1 * num2;
+            return sum;
+        }
+        // The function caller
+        document.getElementById("example").innerHTML = addnumber(10, 10);
+
+        // assigning value directly
+        function assignValue(add1, add2) {
+            var sum = 20 + 30;
+            return sum;
+        }
+        document.getElementById("demo").innerHTML = assignValue()
+
+        // another example
+        function addnum(number1, number2) {
+            var sum = 10 * 8;
+            return sum;
+        }
+        // function caller
+        document.write(addnum() + "<br> <br>")
+
+        // Another example
+        function getFullname(firstname, lastname) {
+            return firstname + " " + lastname;
+        }
+        var fullname = getFullname("Kamaldeen", "Sulyman");
+        document.write(fullname);
+
+        // global scope
+        var fruit = "Apple";
+
+        function call() {
+            document.getElementById("global").innerHTML = "My Favorite Fruits is " + fruit;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in Javascript</title>
+</head>
+<body>
+    <!-- object -->
+    <p id="demo"></p>
+    <button onclick="method.showDetails()">Show Details</button>
+
+
+    <script>
+        // An object is a collection of related data or functionality
+        //object basic syntax
+
+        var person = {
+            fullname: "John Doe",   //String
+            age: 30,                //Number
+            hobbies: ["coding", "playing chess", "watching movies"],    //Array
+            ismarried: false    //Boolean
+        }
+        //using . notation to output variables individually
+        document.getElementById("demo").innerHTML = person.fullname + "<br>" + person.age + "<br>" + person.hobbies[0]
+        //OR by using bracket notation
+        document.getElementById("demo").innerHTML = person["fullname"] + "<br>" + person["hobbies"][2]
+        
+        console.log(person);
+
+
+        // Method inside an object
+
+        var method = {
+            fullname: "Dev Zainab",
+            age: 25,
+        //OR by using this keyword 
+            showDetails: function () {
+                alert(this.fullname + " " + "is" + " " + this.age + " " + "Years Old");
+            }  
+            // showname: function() {
+            //     alert(this.fullname);
+            // },
+            // showage: function() {
+            //     alert(this.age)
+            // }
+        }
+
+        //Having an object inside object
+        var fruits = {
+            mango: {
+                color: "Yellow",
+                taste: "Sweet"
+            },
+            apple: {
+                color: "Green",
+                taste: "Sweet"
+            }
+        }
+        document.write("<br>" + fruits.apple.color)
+    </script>
+</body>
+</html>
